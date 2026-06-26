@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BERGHOFF Bedachungen · Dachdecker-Meisterbetrieb · Hofheim am Taunus</title>
+<meta name="description" content="BERGHOFF Bedachungen, Dachdecker-Meisterbetrieb in Hofheim am Taunus seit 1998. Steildach, Flachdach, Spenglerei, Sturm-Notdienst im Main-Taunus.">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+/* ============================================================
+   BERGHOFF · ENTWURF C — "BOLD EDITORIAL / RASTER"
+   Typo- & strukturgeführt: Hochkontrast Bone+Tinte, mutige
+   Riesen-Typografie, scharfes asymmetrisches Raster, dicke Hair-
+   lines, EIN elektrischer Akzent. Bilder als große Duoton-Voll-
+   bild-Bänder mit Parallax (bewegte Hintergründe, keine Cutouts).
+   Welt: Bone/Tinte + Signal-Zinnober. Space Grotesk + Spectral.
+   ============================================================ */
+:root{
+  --bone:#f1eee6; --bone-2:#e8e4d8; --paper:#ffffff; --ink:#16171b; --ink-2:#2a2c33;
+  --accent:#e8431f; --accent-deep:#c2330f; --accent-soft:#fbe1d8;
+  --text:#43454d; --muted:#5f6157; --line:#15161a; --hair:rgba(21,22,26,.16);
+  --maxw:1240px; --pad:clamp(20px,5vw,52px); --secpad:clamp(80px,11vw,140px);
+  --disp:"Space Grotesk",-apple-system,Segoe UI,Roboto,sans-serif;
+  --serif:"Spectral","Iowan Old Style",Georgia,serif;
+  --ui:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--ui);color:var(--ink);background:var(--bone);line-height:1.62;font-size:1.05rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-height:.98;margin:0 0 .4em;color:var(--ink)}
+h2{font-size:clamp(2.3rem,5.6vw,4.4rem)}
+h3{font-size:1.3rem;letter-spacing:-.01em}
+p{margin:0 0 1em;color:var(--text)}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:var(--secpad) 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-deep)}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--accent)}
+.eyebrow.on-dark{color:var(--accent)}
+.lead{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.55rem);line-height:1.46;color:var(--ink-2);max-width:52ch}
+.lead.on-dark{color:rgba(241,238,230,.82)}
+.idx{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.1em;color:var(--accent-deep)}
+
+/* Buttons (eckig, bold) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--disp);font-weight:600;font-size:1rem;letter-spacing:-.01em;border:0;cursor:pointer;padding:1.05em 1.7em;min-height:58px;text-decoration:none;line-height:1;transition:transform .14s,background .16s,color .16s,box-shadow .16s}
+.btn svg{width:1.15em;height:1.15em}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-deep);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-ink{background:var(--ink);color:var(--bone)}.btn-ink:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--accent)}
+.btn-out{background:transparent;color:var(--ink);border:2px solid var(--ink)}.btn-out:hover{background:var(--ink);color:var(--bone)}
+.btn-out-light{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}.btn-out-light:hover{background:#fff;color:var(--ink)}
+.btn-wa{background:#1f8d4d;color:#fff}.btn-wa:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-lg{min-height:62px;padding:1.15em 2em;font-size:1.05rem}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:60;background:transparent;transition:background .3s,border-color .3s;border-bottom:2px solid transparent}
+header.scrolled{background:var(--bone);border-bottom-color:var(--ink)}
+.navbar{display:flex;align-items:center;gap:18px;height:72px;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.brand{display:flex;align-items:center;gap:.55em;text-decoration:none;color:#fff;flex:none;transition:color .3s}
+header.scrolled .brand{color:var(--ink)}
+.brand .mk{width:32px;height:32px;flex:none}
+.brand b{font-family:var(--disp);font-weight:700;font-size:1.4rem;letter-spacing:-.03em}
+.brand .sub{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7;align-self:flex-end;padding-bottom:.34em}
+.nav-links{display:flex;gap:0;margin-left:auto}
+.nav-links a{padding:.5em .85em;text-decoration:none;font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .3s}
+header.scrolled .nav-links a{color:var(--ink-2)}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{margin-left:8px}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:2px solid rgba(255,255,255,.6);background:transparent;color:#fff;cursor:pointer;place-items:center}
+header.scrolled .burger{border-color:var(--ink);color:var(--ink)}
+section[id]{scroll-margin-top:84px}
+
+/* parallax helper */
+.pbg{position:absolute;inset:-14% 0;z-index:0;overflow:hidden;will-change:transform}
+.pbg img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.06)}
+.scrim{position:absolute;inset:0;z-index:1}
+
+/* HERO — Vollbild-Band + Riesen-Typo */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero .pbg img{transform:scale(1.12);transition:transform 9s ease-out;filter:grayscale(.2) contrast(1.08) brightness(.92)}
+.hero.seen .pbg img{transform:scale(1)}
+.hero .scrim{background:linear-gradient(180deg,rgba(16,17,21,.5),rgba(16,17,21,.15) 30%,rgba(16,17,21,.55) 72%,rgba(12,13,16,.9))}
+.hero-inner{position:relative;z-index:2;width:100%;padding:0 0 clamp(48px,8vh,84px)}
+.hero .topline{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:2px solid rgba(255,255,255,.5);padding-top:14px;margin-bottom:30px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.hero h1{color:#fff;font-size:clamp(3rem,10vw,8rem);line-height:.9;letter-spacing:-.045em;font-weight:700;max-width:13ch;text-transform:uppercase}
+.hero h1 .em{font-family:var(--serif);font-weight:500;font-style:italic;text-transform:none;color:var(--accent);letter-spacing:-.01em}
+.hero .sub{font-size:clamp(1.06rem,1.6vw,1.3rem);color:rgba(255,255,255,.88);max-width:46ch;margin:.6em 0 0}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+
+/* big number rail */
+.rail{background:var(--ink);color:var(--bone)}
+.rail .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.rail .r{padding:36px 28px;border-left:1px solid rgba(241,238,230,.16)}
+.rail .r:first-child{border-left:0;padding-left:0}
+.rail .n{font-family:var(--disp);font-weight:700;font-size:clamp(2.2rem,3.6vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
+.rail .n .u{color:var(--accent)}
+.rail .l{font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(241,238,230,.6);margin-top:.6em}
+
+/* LEISTUNGEN — bold Index mit großen Bild-Bändern */
+.lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:8px}
+.lx{border-bottom:2px solid var(--ink)}
+.lx-row{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,3vw,40px);align-items:center;padding:clamp(26px,3vw,40px) 4px;border-top:1px solid var(--hair);cursor:pointer;text-align:left;width:100%;background:none;border-left:0;border-right:0;font:inherit;color:inherit;transition:padding-left .2s,background .2s}
+.lx-row:first-child{border-top:0}
+.lx-row:hover{padding-left:18px;background:var(--bone-2)}
+.lx-row .n{font-family:var(--mono);font-size:.84rem;font-weight:700;color:var(--accent-deep);align-self:start;padding-top:.5em}
+.lx-row h3{font-family:var(--disp);font-weight:700;font-size:clamp(1.5rem,3vw,2.4rem);letter-spacing:-.03em;margin:0 0 .15em}
+.lx-row p{margin:0;font-size:1.02rem;max-width:54ch}
+.lx-row .go{font-family:var(--disp);font-size:1.6rem;color:var(--ink);transition:color .2s,transform .2s}
+.lx-row:hover .go{color:var(--accent-deep);transform:translateX(6px)}
+/* großes Bild-Band zwischen Index-Blöcken */
+.imgband{position:relative;height:clamp(280px,42vw,540px);overflow:hidden;margin:0;color:#fff}
+.imgband .scrim{background:linear-gradient(90deg,rgba(16,17,21,.7),rgba(16,17,21,.2) 60%,transparent)}
+.imgband .cap{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(24px,3vw,44px)}
+.imgband .cap .t{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.imgband .cap h3{color:#fff;font-size:clamp(1.6rem,3.4vw,2.8rem);margin:.2em 0 0;max-width:16ch;text-transform:uppercase}
+
+/* STATEMENT band (ink) */
+.stmt{background:var(--ink);color:var(--bone)}
+.stmt .q{font-family:var(--serif);font-size:clamp(2rem,5vw,3.6rem);line-height:1.16;font-weight:500;max-width:20ch;margin:0}
+.stmt .q em{font-style:italic;color:var(--accent)}
+.stmt .by{display:block;margin-top:1em;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(241,238,230,.55)}
+
+/* WERKVERZEICHNIS — Vollbild-Feature + Streifen */
+.whead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:40px}
+.wcount{font-family:var(--disp);font-weight:700;font-size:clamp(3rem,7vw,5.4rem);line-height:.85;font-variant-numeric:tabular-nums}
+.wcount .u{color:var(--accent)}
+.wfeat{position:relative;height:clamp(320px,46vw,560px);overflow:hidden;color:#fff}
+.wfeat .scrim{background:linear-gradient(180deg,transparent 45%,rgba(12,13,16,.85))}
+.wfeat .cap{position:absolute;left:0;bottom:0;z-index:2;padding:clamp(24px,3vw,44px)}
+.wfeat .cap .t{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.wfeat .cap h3{color:#fff;font-size:clamp(1.6rem,3vw,2.4rem);margin:.2em 0 0;text-transform:uppercase}
+.wstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;background:var(--ink)}
+.wcell{position:relative;aspect-ratio:4/3;overflow:hidden;border:0;padding:0;cursor:pointer;background:var(--ink)}
+.wcell img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.05);transition:transform .5s,filter .3s}
+.wcell:hover img{transform:scale(1.06);filter:grayscale(0) contrast(1.05)}
+.wcell .t{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;color:#fff;text-transform:uppercase}
+.wcell::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,13,16,.6),transparent 50%)}
+
+/* FESTPREIS (bold ink) */
+.fest{background:var(--ink);color:var(--bone);text-align:center}
+.fest .wrap{max-width:880px}
+.fest .statement{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,6vw,4.4rem);line-height:.98;letter-spacing:-.035em;text-transform:uppercase;color:#fff;margin:.3em auto .2em;max-width:15ch}
+.fest .statement em{font-family:var(--serif);font-weight:500;font-style:italic;text-transform:none;color:var(--accent)}
+.fest .fp-sub{color:rgba(241,238,230,.72);max-width:52ch;margin:1em auto 2.2em}
+.faks{display:grid;gap:0;border:2px solid rgba(241,238,230,.3);background:transparent;margin:0 auto 30px;text-align:left;max-width:460px}
+.faks .fl{display:flex;justify-content:space-between;gap:18px;font-family:var(--mono);font-size:.82rem;color:rgba(241,238,230,.78);border-bottom:1px solid rgba(241,238,230,.16);padding:13px 18px}
+.faks .fl:last-child{border-bottom:0;color:#fff;font-weight:700;background:rgba(232,67,31,.14)}
+.faks .fl b{color:var(--accent);font-weight:600}
+
+/* NOTDIENST (accent band) */
+.not{background:var(--accent-deep);color:#fff}
+.not-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,52px);align-items:center}
+.not .status{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.not .status .pd{width:11px;height:11px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.6);animation:pulse 1.9s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}70%{box-shadow:0 0 0 13px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.not h2{color:#fff;text-transform:uppercase;max-width:13ch}
+.not p{color:rgba(255,255,255,.92);max-width:42ch}
+.not-tel{display:inline-flex;align-items:center;gap:.4em;font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,3.8vw,2.7rem);color:#fff;text-decoration:none;line-height:1;margin:10px 0 18px;letter-spacing:-.03em}
+.not-tel svg{width:.7em;height:.7em}
+.not-cta{display:flex;flex-wrap:wrap;gap:13px}
+.not-media{position:relative;aspect-ratio:4/3;overflow:hidden;border:3px solid #fff}
+.not-media img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+
+/* VERSICHERUNG (bold steps) */
+.steps{border-top:2px solid var(--ink);margin-top:46px}
+.vstep{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(16px,3vw,40px);align-items:start;padding:32px 4px;border-bottom:1px solid var(--hair);cursor:pointer;text-align:left;width:100%;background:none;border-left:0;border-right:0;font:inherit;color:inherit;transition:padding-left .18s,background .18s}
+.vstep:hover{padding-left:16px;background:var(--bone-2)}
+.vstep .sn{font-family:var(--disp);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:.9;color:transparent;-webkit-text-stroke:1.5px var(--accent)}
+.vstep h3{font-size:1.3rem;margin:0 0 .25em}
+.vstep p{margin:0;font-size:1rem;max-width:50ch}
+.vstep .meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);align-self:center;white-space:nowrap}
+
+/* EXPERTISE (image + bold list) */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink)}
+.exp-media{position:relative;overflow:hidden;min-height:420px}
+.exp-media .pbg img{transform:scale(1.1);transition:transform 1.3s ease}
+.exp-grid.in .exp-media .pbg img{transform:scale(1)}
+.exp-tx{padding:clamp(30px,4vw,52px);border-left:2px solid var(--ink)}
+.exp-rows{list-style:none;padding:0;margin:18px 0 0}
+.exp-rows li{padding:22px 0;border-top:1px solid var(--hair);cursor:pointer}
+.exp-rows li:first-child{border-top:0}
+.exp-rows .n{font-family:var(--mono);font-size:.74rem;font-weight:700;color:var(--accent-deep)}
+.exp-rows h3{margin:.2em 0 .15em;font-size:1.3rem;transition:color .15s}
+.exp-rows li:hover h3{color:var(--accent)}
+.exp-rows p{margin:0;font-size:.97rem}
+
+/* ÜBER-UNS (portrait band) */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border:2px solid var(--ink)}
+.about-media{position:relative;overflow:hidden;min-height:480px}
+.about-media .pbg img{transform:scale(1.08);transition:transform 1.4s ease;filter:grayscale(.2) contrast(1.05)}
+.about-grid.in .about-media .pbg img{transform:scale(1)}
+.about-media .stamp{position:absolute;left:0;bottom:0;z-index:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--ink);padding:9px 14px}
+.about-tx{padding:clamp(30px,4vw,56px);border-left:2px solid var(--ink);display:flex;flex-direction:column;justify-content:center}
+.about-quote{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.28;color:var(--ink);font-weight:500;margin:14px 0 14px}
+.about-quote::before{content:"„";color:var(--accent)}
+.about-sig{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin:0 0 22px}
+.about-data{list-style:none;padding:0;margin:0 0 26px;border-top:2px solid var(--ink)}
+.about-data li{display:flex;gap:1em;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--hair)}
+.about-data li b{font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-deep);flex:0 0 100px}
+
+/* STIMMEN */
+.voices-head{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:40px}
+.voices-head .agg{font-family:var(--disp);font-weight:700;font-size:clamp(2.6rem,5vw,4rem);line-height:.85;font-variant-numeric:tabular-nums}
+.voices-head .agg .st{color:var(--accent);font-size:.4em;letter-spacing:2px;display:block;margin-top:.3em}
+.voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-left:1px solid var(--hair)}
+.voice{padding:32px 30px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);border-top:2px solid var(--ink);cursor:pointer;text-align:left;font:inherit;color:inherit;background:none;transition:background .15s}
+.voice:hover{background:var(--bone-2)}
+.voice .st{color:var(--accent);letter-spacing:2px;font-size:.95rem}
+.voice p{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--ink);margin:.5em 0 .7em}
+.voice small{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* KONTAKT */
+.k-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:2px solid var(--ink)}
+.k-form{padding:clamp(28px,3vw,44px)}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:var(--mono);font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5em;color:var(--muted)}
+.field input,.field textarea,.field select{width:100%;padding:.9em 1em;border:2px solid var(--hair);background:var(--paper);color:var(--ink);font-family:var(--ui);font-size:1rem;transition:border-color .15s}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+.field.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.k-side{background:var(--ink);color:var(--bone);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:center}
+.k-side .eyebrow{color:var(--accent)}
+.k-side .ci{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(241,238,230,.16);cursor:pointer;text-align:left;width:100%;background:none;border-left:0;border-right:0;border-top:0;font:inherit;color:inherit;transition:padding-left .15s}
+.k-side .ci:hover{padding-left:8px}
+.k-side .ci .ck{font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);flex:0 0 84px;padding-top:.3em}
+.k-side .ci b{display:block;font-family:var(--disp);font-weight:700;font-size:1.16rem;color:#fff;letter-spacing:-.02em}
+.k-side .ci span{color:rgba(241,238,230,.7);font-size:.9rem}
+
+/* Footer */
+footer{background:var(--ink);color:rgba(241,238,230,.7);padding:56px 0 30px;font-size:.95rem;border-top:3px solid var(--accent)}
+footer a{color:rgba(241,238,230,.85);text-decoration:none}footer a:hover{color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px;margin-bottom:30px}
+.foot-grid h4{color:#fff;margin:0 0 1em;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:.55em}
+.foot-brand b{font-family:var(--disp);font-weight:700;font-size:1.9rem;color:#fff;letter-spacing:-.03em}
+.foot-bot{border-top:1px solid rgba(241,238,230,.16);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;color:rgba(241,238,230,.5)}
+
+/* Explain popover */
+.explain-pop{position:absolute;z-index:200;max-width:300px;background:var(--paper);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--accent);padding:0;opacity:0;transform:translateY(6px);transition:opacity .14s,transform .14s;pointer-events:none}
+.explain-pop.show{opacity:1;transform:none;pointer-events:auto}
+.explain-pop .ep-head{display:flex;align-items:center;gap:.5em;padding:14px 16px 0;color:var(--accent-deep);font-family:var(--mono);font-weight:600;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase}
+.explain-pop .ep-head svg{width:15px;height:15px}
+.explain-pop .ep-body{padding:7px 16px 16px;font-size:.95rem;color:var(--ink);line-height:1.5}
+.explain-pop .ep-arrow{position:absolute;width:12px;height:12px;background:var(--paper);border:2px solid var(--ink);transform:rotate(45deg)}
+.explain-pop.pos-right .ep-arrow{left:-7px;top:22px;border-right:0;border-top:0}
+.explain-pop.pos-left .ep-arrow{right:-7px;top:22px;border-left:0;border-bottom:0}
+.explain-pop.pos-top .ep-arrow{bottom:-7px;left:24px;border-left:0;border-top:0}
+.explain-pop.pos-bottom .ep-arrow{top:-7px;left:24px;border-right:0;border-bottom:0}
+.demo-cta{position:relative}
+
+/* Sticky mobile + mobile nav */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--bone);border-top:2px solid var(--ink)}
+.sticky-cta .btn{flex:1;min-height:52px;padding:.8em .6em;font-size:.95rem}
+.mnav{position:fixed;inset:0;z-index:90;background:rgba(16,17,21,.55);opacity:0;pointer-events:none;transition:opacity .2s}
+.mnav.open{opacity:1;pointer-events:auto}
+.mnav-panel{position:absolute;top:0;right:0;height:100%;width:min(82%,330px);background:var(--bone);border-left:2px solid var(--ink);transform:translateX(100%);transition:transform .26s ease;padding:24px;display:flex;flex-direction:column;gap:4px}
+.mnav.open .mnav-panel{transform:none}
+.mnav-panel a{padding:.9em .4em;text-decoration:none;color:var(--ink);font-family:var(--mono);font-weight:600;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid var(--hair)}
+.mnav-panel .close{align-self:flex-end;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+/* Reveal */
+.js .rv{opacity:0;transform:translateY(18px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity .55s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.js .rv.d1{transition-delay:.07s}.js .rv.d2{transition-delay:.14s}.js .rv.d3{transition-delay:.21s}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1!important;transform:none!important}.pbg{transform:none!important}.hero .pbg img,.exp-media .pbg img,.about-media .pbg img{transform:none!important}.not .status .pd{animation:none}}
+
+/* Responsive */
+@media(max-width:960px){
+  .rail .wrap{grid-template-columns:1fr 1fr}.rail .r{border-left:0;border-top:1px solid rgba(241,238,230,.16);padding-left:0}.rail .r:nth-child(2){border-top:0}
+  .lx-row{grid-template-columns:auto 1fr;gap:16px}.lx-row .go{display:none}
+  .not-grid,.exp-grid,.about-grid,.k-grid{grid-template-columns:1fr}
+  .exp-tx,.about-tx,.k-side{border-left:0;border-top:2px solid var(--ink)}
+  .exp-media,.about-media,.not-media{order:-1;min-height:300px;aspect-ratio:auto}
+  .wstrip,.voices-grid{grid-template-columns:1fr 1fr}
+  .vstep{grid-template-columns:auto 1fr}.vstep .meta{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-links,.navbar .nav-cta{display:none}.burger{display:grid}
+  .rail .wrap,.wstrip,.voices-grid{grid-template-columns:1fr}
+  .field.row2{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .sticky-cta{display:flex}body{padding-bottom:74px}
+  .hero{min-height:90vh}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="navbar">
+    <a href="#top" class="brand" aria-label="BERGHOFF Bedachungen">
+      <span class="mk"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 17 16 6l13 11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M6 15v12h20V15" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 27v-7h8v7" fill="none" stroke="#e8431f" stroke-width="2.6"/></svg></span>
+      <b>BERGHOFF</b><span class="sub">Bedachungen</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a><a href="#werk">Werk</a><a href="#expertise">Expertise</a><a href="#ueber">Über uns</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-accent nav-cta demo-cta" data-explain-key="angebot" style="min-height:44px;padding:.65em 1.2em">Festpreis-Angebot</a>
+    <button class="burger" id="burger" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="pbg" data-parallax="0.18"><img src="assets/dach/dach-hero.jpg" alt="Neu gedecktes Steildach im Main-Taunus"></div>
+  <div class="scrim"></div>
+  <div class="hero-inner"><div class="wrap">
+    <div class="topline"><span>BERGHOFF Bedachungen — Hofheim a. Ts.</span><span>Est. 1998 · Innung &amp; ZVDH</span></div>
+    <h1>Dächer, die <span class="em">halten.</span></h1>
+    <p class="sub">Dachdecker-Meisterbetrieb im Main-Taunus. Steildach, Flachdach, Spenglerei und Sturm-Notdienst — ein Ansprechpartner, klarer Festpreis.</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent btn-lg demo-cta" data-explain-key="angebot">Festpreis-Angebot</a>
+      <a class="btn btn-out-light btn-lg demo-cta" data-explain-key="tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"/></svg> 06192 / 95 88 0</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- RAIL -->
+<section class="rail">
+  <div class="wrap">
+    <div class="r"><div class="n"><span data-target="1200">1.200</span><span class="u">+</span></div><div class="l">Gedeckte Dächer</div></div>
+    <div class="r"><div class="n"><span data-target="27">27</span></div><div class="l">Jahre Meisterbetrieb</div></div>
+    <div class="r"><div class="n">4,9<span class="u">★</span></div><div class="l">aus 214 Bewertungen</div></div>
+    <div class="r"><div class="n">24<span class="u">h</span></div><div class="l">Sturm-Notdienst</div></div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="lhead"><div><span class="eyebrow rv">Leistungen</span><h2 class="rv" style="margin:.3em 0 0;max-width:13ch">Alles rund ums Dach.</h2></div><span class="idx rv">01 — 06</span></div>
+    <div class="lx rv">
+      <button class="lx-row demo-cta" data-explain-key="beratung"><span class="n">01</span><div><h3>Steildach &amp; Neueindeckung</h3><p>Ziegel, Schiefer, Biber — fachgerecht eingedeckt inkl. Dämmung und Unterspannbahn.</p></div><span class="go">→</span></button>
+      <button class="lx-row demo-cta" data-explain-key="beratung"><span class="n">02</span><div><h3>Flachdach &amp; Abdichtung</h3><p>Bitumen, Kunststoff oder begrünt, dicht und langlebig mit Gefälleplanung.</p></div><span class="go">→</span></button>
+      <button class="lx-row demo-cta" data-explain-key="beratung"><span class="n">03</span><div><h3>Spenglerei &amp; Zink</h3><p>Rinnen, Kehlen, Verblechung — sauberes Klempnerhandwerk, das hält.</p></div><span class="go">→</span></button>
+    </div>
+  </div>
+  <div class="imgband rv" style="margin-top:2px"><div class="pbg" data-parallax="0.14"><img src="assets/dach/dach-ziegel.jpg" alt="Ziegel-Steildach Detail"></div><div class="scrim"></div><div class="cap"><span class="t">Handwerk · Ziegel für Ziegel</span><h3>Sauber gedeckt, Jahrzehnte dicht</h3></div></div>
+  <div class="wrap">
+    <div class="lx rv" style="border-top:0">
+      <button class="lx-row demo-cta" data-explain-key="beratung"><span class="n">04</span><div><h3>Gauben &amp; Dachfenster</h3><p>Mehr Licht und Raum unterm Dach, dicht eingebunden und sauber verarbeitet.</p></div><span class="go">→</span></button>
+      <button class="lx-row demo-cta" data-explain-key="beratung"><span class="n">05</span><div><h3>Gewerbe- &amp; Hallendach</h3><p>Große Flächen, klare Termine, ein Ansprechpartner für den Bauleiter.</p></div><span class="go">→</span></button>
+      <button class="lx-row demo-cta" data-explain-key="notfall"><span class="n">06</span><div><h3>Reparatur &amp; Sturmschaden</h3><p>Undichte Stelle, lose Ziegel, Sturmschaden — schnell gefunden, sauber behoben.</p></div><span class="go">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="sec stmt">
+  <div class="wrap">
+    <span class="eyebrow on-dark rv">Anspruch</span>
+    <p class="q rv" style="margin-top:.4em">Ein gutes Dach sieht man nicht. <em>Man merkt nur, dass alles trocken bleibt.</em><span class="by">BERGHOFF Bedachungen · Hofheim seit 1998</span></p>
+  </div>
+</section>
+
+<!-- WERKVERZEICHNIS -->
+<section class="sec" id="werk">
+  <div class="wrap">
+    <div class="whead rv"><div><span class="eyebrow">Werkverzeichnis</span><h2 style="margin:.3em 0 0;max-width:13ch">Über 1.200 Dächer.</h2></div><div style="text-align:right"><div class="wcount"><span data-target="1200">1.200</span><span class="u">+</span></div><div class="idx" style="margin-top:.4em">seit 1998 · Main-Taunus</div></div></div>
+  </div>
+  <div class="wfeat rv"><div class="pbg" data-parallax="0.12"><img src="assets/dach/dach-roof2.jpg" alt="Neu eingedecktes Satteldach aus der Luft"></div><div class="scrim"></div><div class="cap"><span class="t">Aktuelles Projekt · 2024</span><h3>Neueindeckung Satteldach, Hofheim-Marxheim</h3></div></div>
+  <div class="wstrip">
+    <button class="wcell demo-cta" data-explain-key="werkverzeichnis"><img src="assets/dach/dach-flachdach.jpg" alt="Flachdach Kelkheim" loading="lazy"><span class="t">Kelkheim · Flachdach</span></button>
+    <button class="wcell demo-cta" data-explain-key="werkverzeichnis"><img src="assets/dach/dach-ziegel.jpg" alt="Steildach Liederbach" loading="lazy"><span class="t">Liederbach · Gaube</span></button>
+    <button class="wcell demo-cta" data-explain-key="werkverzeichnis"><img src="assets/dach/dach-hero.jpg" alt="Steildach Kriftel" loading="lazy"><span class="t">Kriftel · Neueindeckung</span></button>
+  </div>
+</section>
+
+<!-- FESTPREIS -->
+<section class="sec fest">
+  <div class="wrap">
+    <span class="eyebrow on-dark rv" style="justify-content:center;display:inline-flex">Festpreis-Versprechen</span>
+    <p class="statement rv">Was wir sagen, <em>gilt.</em></p>
+    <p class="fp-sub rv">Vor dem ersten Ziegel steht ein klarer, schriftlicher Festpreis. Keine Nachträge aus heiterem Himmel — was im Angebot steht, wird abgerechnet.</p>
+    <div class="faks rv">
+      <div class="fl"><span>Position</span><b>Betrag</b></div>
+      <div class="fl"><span>Neueindeckung Steildach</span><span>nach Aufmaß</span></div>
+      <div class="fl"><span>Gerüst &amp; Entsorgung</span><span>inkl.</span></div>
+      <div class="fl"><span>Aufmaß &amp; Beratung</span><span>kostenlos</span></div>
+      <div class="fl"><span>Festpreis gesamt</span><span>verbindlich</span></div>
+    </div>
+    <a class="btn btn-accent btn-lg demo-cta rv" data-explain-key="angebot">Mein Festpreis-Angebot</a>
+  </div>
+</section>
+
+<!-- NOTDIENST -->
+<section class="sec not" id="notdienst">
+  <div class="wrap">
+    <div class="not-grid">
+      <div class="rv">
+        <span class="status"><span class="pd"></span> Sturm-Notdienst · oft in 60 Min vor Ort</span>
+        <h2>Sturmschaden?</h2>
+        <p class="lead on-dark" style="color:rgba(255,255,255,.92)">Ziegel runtergeweht, Dach undicht? Wir sichern zuerst, dokumentieren den Schaden und reparieren zum Festpreis.</p>
+        <a class="not-tel demo-cta" data-explain-key="tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"/></svg> 06192 / 95 88 0</a>
+        <div class="not-cta">
+          <a class="btn btn-ink demo-cta" data-explain-key="notfall">Notdienst rufen</a>
+          <a class="btn btn-wa demo-cta" data-explain-key="whatsapp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg> WhatsApp</a>
+        </div>
+      </div>
+      <div class="not-media rv"><img src="assets/dach/dach-sturm.jpg" alt="Sturmschaden an einem Dach im Main-Taunus"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERSICHERUNG -->
+<section class="sec" id="versicherung">
+  <div class="wrap">
+    <span class="eyebrow rv">Versicherung &amp; Papierkram</span>
+    <h2 class="rv" style="margin:.3em 0 .1em;max-width:14ch">Den Schriftverkehr übernehmen wir.</h2>
+    <p class="lead rv">Bei Sturmschaden dokumentieren wir alles beweissicher und reden mit Ihrer Versicherung.</p>
+    <div class="steps rv">
+      <button class="vstep demo-cta" data-explain-key="notfall"><span class="sn">01</span><div><h3>Schaden melden</h3><p>Ein Anruf oder ein Foto genügt. Wir sichern das Dach sofort.</p></div><span class="meta">Tag 0</span></button>
+      <button class="vstep demo-cta" data-explain-key="expertise"><span class="sn">02</span><div><h3>Aufmaß &amp; Befund</h3><p>Beweissichere Bilder und eine klare Schadensaufnahme.</p></div><span class="meta">Tag 1–2</span></button>
+      <button class="vstep demo-cta" data-explain-key="formular"><span class="sn">03</span><div><h3>Schriftverkehr</h3><p>Kostenvoranschlag und Nachweise direkt an die Versicherung.</p></div><span class="meta">laufend</span></button>
+      <button class="vstep demo-cta" data-explain-key="angebot"><span class="sn">04</span><div><h3>Reparatur</h3><p>Fachgerecht behoben, sauber dokumentiert, zum vereinbarten Festpreis.</p></div><span class="meta">nach Freigabe</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="sec" id="expertise">
+  <div class="wrap">
+    <span class="eyebrow rv">Über das Decken hinaus</span>
+    <h2 class="rv" style="margin:.3em 0 .5em;max-width:15ch">Wir sehen, was andere übersehen.</h2>
+    <div class="exp-grid rv">
+      <div class="exp-media"><div class="pbg" data-parallax="0.1"><img src="assets/dach/dach-roof2.jpg" alt="Dachinspektion aus der Luft"></div></div>
+      <div class="exp-tx">
+        <p class="lead" style="font-size:1.12rem;margin-bottom:0">Berghoff ist Dachdecker und Dach-Gutachter zugleich.</p>
+        <ul class="exp-rows">
+          <li class="demo-cta" data-explain-key="expertise"><span class="n">A</span><h3>Dachdecker &amp; Gutachter</h3><p>Ehrliche Einschätzung: Reparatur reicht oder Neueindeckung lohnt — mit Begründung.</p></li>
+          <li class="demo-cta" data-explain-key="expertise"><span class="n">B</span><h3>Drohnen-Inspektion</h3><p>Jeder Winkel sichtbar, ohne Gerüst, mit Foto-Befund für Ihre Unterlagen.</p></li>
+          <li class="demo-cta" data-explain-key="beratung"><span class="n">C</span><h3>Energieberatung Dach</h3><p>Dämmung, Förderung, Solar-Vorbereitung — was sich für Ihr Dach rechnet.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER-UNS -->
+<section class="sec" id="ueber">
+  <div class="wrap">
+    <div class="about-grid rv">
+      <div class="about-media"><div class="pbg" data-parallax="0.08"><img src="assets/dach/dach-inhaber.jpg" alt="Dachdeckermeister Stefan Berghoff"></div><span class="stamp">Stefan Berghoff · Dachdeckermeister</span></div>
+      <div class="about-tx">
+        <span class="eyebrow">Inhabergeführt · 2. Generation</span>
+        <p class="about-quote">Auf jedem Dach steht mein Name. Deshalb wird es so gemacht, wie ich es bei mir zu Hause machen würde.“</p>
+        <p class="about-sig">— Stefan Berghoff · Dachdeckermeister</p>
+        <ul class="about-data">
+          <li><b>Seit</b> Meisterbetrieb in Hofheim seit 1998</li>
+          <li><b>Team</b> Festangestellte Dachdecker, eigenes Gerüst</li>
+          <li><b>Verband</b> Innung &amp; ZVDH, Sachkundenachweis</li>
+          <li><b>Region</b> Main-Taunus &amp; Frankfurt-West</li>
+        </ul>
+        <a class="btn btn-out demo-cta" data-explain-key="angebot">Betrieb kennenlernen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STIMMEN -->
+<section class="sec" id="stimmen">
+  <div class="wrap">
+    <div class="voices-head rv"><span class="agg">4,9<span class="st">★★★★★</span></span><span class="idx">aus 214 Bewertungen · Main-Taunus</span></div>
+    <div class="voices-grid rv">
+      <button class="voice demo-cta" data-explain-key="werkverzeichnis"><div class="st">★★★★★</div><p>Ehrliche Beratung, kein Verkaufsdruck. Reparatur statt komplett neu — hat uns viel Geld gespart.</p><small>K. Otto · Hofheim · 2024</small></button>
+      <button class="voice demo-cta" data-explain-key="notfall"><div class="st">★★★★★</div><p>Nach dem Sturm am selben Tag da, Dach gesichert und alles für die Versicherung dokumentiert.</p><small>M. Reinhardt · Kelkheim · 2024</small></button>
+      <button class="voice demo-cta" data-explain-key="angebot"><div class="st">★★★★★</div><p>Festpreis hat exakt gehalten, Baustelle täglich sauber, Termine pünktlich. Top.</p><small>S. Brand · Liederbach · 2023</small></button>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="sec" id="kontakt">
+  <div class="wrap">
+    <span class="eyebrow rv">Kontakt</span>
+    <h2 class="rv" style="margin:.3em 0 .5em;max-width:18ch">Festpreis-Angebot — kostenlos &amp; unverbindlich.</h2>
+    <div class="k-grid rv">
+      <form class="k-form" id="anfrageForm">
+        <div class="field row2">
+          <div class="field" style="margin:0"><label>Name</label><input type="text" placeholder="Vor- und Nachname"></div>
+          <div class="field" style="margin:0"><label>Telefon</label><input type="tel" placeholder="Für den Rückruf"></div>
+        </div>
+        <div class="field"><label>Worum geht es?</label><select><option>Neueindeckung / Steildach</option><option>Flachdach / Abdichtung</option><option>Spenglerei / Rinne</option><option>Gaube / Dachfenster</option><option>Sturmschaden (eilig)</option><option>Inspektion / Gutachten</option></select></div>
+        <div class="field"><label>Ihre Nachricht</label><textarea rows="3" placeholder="z. B. Baujahr, Dachfläche, was ist das Problem"></textarea></div>
+        <button type="submit" class="btn btn-accent btn-lg demo-cta" data-explain-key="formular" style="width:100%">Kostenlose Aufnahme anfragen</button>
+        <p style="font-family:var(--mono);font-size:.7rem;color:var(--muted);margin:1em 0 0;text-align:center;letter-spacing:.04em">Daten nur zur Bearbeitung der Anfrage</p>
+      </form>
+      <div class="k-side">
+        <span class="eyebrow" style="margin-bottom:10px">Direkt erreichbar</span>
+        <button class="ci demo-cta" data-explain-key="notfall"><span class="ck">Notdienst</span><span><b>24 h erreichbar</b><span>Sturmschaden? Direkt aufs Handy</span></span></button>
+        <button class="ci demo-cta" data-explain-key="tel"><span class="ck">Telefon</span><span><b>06192 / 95 88 0</b><span>Mo–Fr 7–17 Uhr</span></span></button>
+        <button class="ci demo-cta" data-explain-key="mail"><span class="ck">E-Mail</span><span><b>info@berghoff-bedachungen.de</b><span>Antwort am selben Werktag</span></span></button>
+        <button class="ci demo-cta" data-explain-key="adresse"><span class="ck">Werkstatt</span><span><b>Industriestraße 14, Hofheim</b><span>Main-Taunus &amp; Frankfurt-West</span></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><b>BERGHOFF</b><p style="margin-top:12px;max-width:34ch">Ihr Dachdecker-Meisterbetrieb für Hofheim, Kelkheim, Bad Soden und den ganzen Main-Taunus-Kreis.</p></div>
+      <div><h4>Leistungen</h4><ul><li><a href="#leistungen">Steildach &amp; Neueindeckung</a></li><li><a href="#leistungen">Flachdach &amp; Spenglerei</a></li><li><a href="#expertise">Drohnen-Inspektion</a></li><li><a href="#notdienst">Sturm-Notdienst</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><button class="demo-cta" data-explain-key="tel" style="background:none;border:0;color:rgba(241,238,230,.85);cursor:pointer;font:inherit;padding:0;font-family:var(--mono)">06192 / 95 88 0</button></li><li><button class="demo-cta" data-explain-key="mail" style="background:none;border:0;color:rgba(241,238,230,.85);cursor:pointer;font:inherit;padding:0;font-family:var(--mono)">info@berghoff-bedachungen.de</button></li><li>Industriestraße 14, Hofheim</li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 BERGHOFF Bedachungen · Innung &amp; ZVDH</span><span style="display:flex;gap:18px"><a href="#" onclick="return demoLegal(event)">Impressum</a><a href="#" onclick="return demoLegal(event)">Datenschutz</a></span></div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-cta">
+  <a class="btn btn-out demo-cta" data-explain-key="notfall">Notdienst</a>
+  <a class="btn btn-accent demo-cta" data-explain-key="angebot">Festpreis-Angebot</a>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mnav" id="mnav"><div class="mnav-panel">
+  <button class="close" id="mnavClose" aria-label="Schließen">×</button>
+  <a href="#leistungen">Leistungen</a><a href="#werk">Werk</a><a href="#expertise">Expertise</a><a href="#ueber">Über uns</a><a href="#kontakt">Kontakt</a>
+  <a class="btn btn-accent demo-cta" data-explain-key="angebot" style="margin-top:14px">Festpreis-Angebot</a>
+</div></div>
+
+<script>
+document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var EXPLAIN={
+  tel:{h:'Anruf-Button',b:'Hier wäre <b>Ihre Telefonnummer</b> hinterlegt. Ein Tippen wählt Sie auf dem Handy <b>direkt an</b>.'},
+  whatsapp:{h:'WhatsApp',b:'Öffnet einen <b>WhatsApp-Chat zu Ihrer Business-Nummer</b>. Der Kunde schickt sofort ein Foto.'},
+  mail:{h:'E-Mail',b:'Öffnet das Mailprogramm mit <b>Ihrer Adresse schon eingetragen</b>.'},
+  angebot:{h:'Festpreis-Angebot',b:'Führt zum <b>Angebots-Formular</b>. Abgeschickt landet die Anfrage <b>sofort in Ihrem Postfach</b>.'},
+  beratung:{h:'Beratung anfragen',b:'Führt zum <b>Kontaktformular</b> mit dieser Leistung vorausgewählt.'},
+  expertise:{h:'Inspektion / Gutachten',b:'Führt zur Anfrage für <b>Drohnen-Inspektion bzw. Gutachten</b>.'},
+  formular:{h:'Anfrage absenden',b:'Die Anfrage käme <b>sofort als E-Mail</b> bei Ihnen an, auf Wunsch als <b>SMS</b>.'},
+  notfall:{h:'Sturm-Notdienst',b:'Wählt direkt Ihre <b>Notfallnummer</b> — für Sturmschaden oder undichtes Dach.'},
+  adresse:{h:'Adresse / Anfahrt',b:'Hier würde sich <b>Google Maps mit Ihrer Route</b> öffnen.'},
+  werkverzeichnis:{h:'Referenz-Projekt',b:'Im echten Auftritt öffnet sich hier das <b>Projekt mit weiteren Fotos</b>.'},
+  legal:{h:'Rechts-Seite',b:'Im echten Auftritt liegt hier Ihr fertiges <b>Impressum bzw. Datenschutz</b>.'}
+};
+var pop=null;
+function closePop(){if(pop){pop.classList.remove('show');var p=pop;setTimeout(function(){if(p&&p.parentNode)p.parentNode.removeChild(p);},160);pop=null;}}
+function showExplain(el,key){closePop();var d=EXPLAIN[key]||{h:'Hinweis',b:'Hier passiert später eine Aktion.'};pop=document.createElement('div');pop.className='explain-pop';pop.innerHTML='<div class="ep-arrow"></div><div class="ep-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Vorschau · '+d.h+'</div><div class="ep-body">'+d.b+'</div>';document.body.appendChild(pop);position(pop,el);requestAnimationFrame(function(){pop.classList.add('show');});}
+function position(p,el){var r=el.getBoundingClientRect(),pw=p.offsetWidth,sx=window.pageXOffset,sy=window.pageYOffset,gap=12,vw=window.innerWidth,left,top,cls;if(vw<=720){var ph=p.offsetHeight;left=sx+Math.min(Math.max(r.left,12),vw-pw-12);if(r.bottom+gap+ph>window.innerHeight&&r.top-gap-ph>8){cls='pos-top';top=sy+r.top-gap-ph;}else{cls='pos-bottom';top=sy+r.bottom+gap;}}else if(r.right+gap+pw<vw){cls='pos-right';left=sx+r.right+gap;top=sy+r.top+r.height/2-28;}else if(r.left-gap-pw>0){cls='pos-left';left=sx+r.left-gap-pw;top=sy+r.top+r.height/2-28;}else{cls='pos-bottom';left=sx+Math.min(r.left,vw-pw-12);top=sy+r.bottom+gap;}top=Math.max(sy+8,top);p.className='explain-pop '+cls;p.style.left=Math.max(8,left)+'px';p.style.top=top+'px';}
+document.addEventListener('click',function(e){var t=e.target.closest('.demo-cta');if(t){e.preventDefault();showExplain(t,t.getAttribute('data-explain-key'));return;}if(pop&&!e.target.closest('.explain-pop'))closePop();});
+document.querySelectorAll('a.demo-cta').forEach(function(a){if(!a.getAttribute('href')){a.setAttribute('tabindex','0');a.setAttribute('role','button');}});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var t=e.target.closest?e.target.closest('.demo-cta'):null;if(t&&t.tagName==='A'){e.preventDefault();showExplain(t,t.getAttribute('data-explain-key'));}}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePop();});
+window.addEventListener('scroll',closePop,{passive:true});window.addEventListener('resize',closePop);
+var aF=document.getElementById('anfrageForm');if(aF)aF.addEventListener('submit',function(e){e.preventDefault();});
+function demoLegal(e){e.preventDefault();showExplain(e.target,'legal');return false;}
+
+var hdr=document.getElementById('hdr');
+function onHdr(){if(window.pageYOffset>40)hdr.classList.add('scrolled');else hdr.classList.remove('scrolled');}
+onHdr();window.addEventListener('scroll',onHdr,{passive:true});
+
+var players=[].slice.call(document.querySelectorAll('[data-parallax]'));
+function par(){var vh=window.innerHeight;players.forEach(function(el){var host=el.parentElement;var r=host.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;var sp=parseFloat(el.getAttribute('data-parallax'))||0.12;var off=(r.top+r.height/2-vh/2)*sp*-1;el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';});}
+if(!RM){var pt=false;window.addEventListener('scroll',function(){if(!pt){pt=true;requestAnimationFrame(function(){pt=false;par();});}},{passive:true});window.addEventListener('resize',par);par();}
+
+function countUp(el){if(!el||el.dataset.done)return;el.dataset.done='1';var target=parseInt(el.getAttribute('data-target'),10);if(RM){el.textContent=target.toLocaleString('de-DE');return;}var t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1100);var v=Math.round(target*(0.15+0.85*p));el.textContent=v.toLocaleString('de-DE');if(p<1)requestAnimationFrame(step);else el.textContent=target.toLocaleString('de-DE');}requestAnimationFrame(step);}
+
+(function(){
+  var hero=document.querySelector('.hero');if(hero)requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add('seen');});});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+    document.querySelectorAll('.rv,.exp-grid,.about-grid,.imgband,.wfeat').forEach(function(el){io.observe(el);});
+    var nio=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){countUp(en.target);nio.unobserve(en.target);}});},{threshold:.5});
+    document.querySelectorAll('[data-target]').forEach(function(n){nio.observe(n);});
+    window.addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.rv,.exp-grid,.about-grid,.imgband,.wfeat').forEach(function(el){el.classList.add('in');});document.querySelectorAll('[data-target]').forEach(countUp);if(hero)hero.classList.add('seen');},900);});
+  }else{document.querySelectorAll('.rv,.exp-grid,.about-grid,.imgband,.wfeat').forEach(function(el){el.classList.add('in');});document.querySelectorAll('[data-target]').forEach(countUp);}
+})();
+
+var mnav=document.getElementById('mnav');
+document.getElementById('burger').addEventListener('click',function(){mnav.classList.add('open');});
+document.getElementById('mnavClose').addEventListener('click',function(){mnav.classList.remove('open');});
+mnav.addEventListener('click',function(e){if(e.target===mnav||(e.target.tagName==='A'&&!e.target.classList.contains('demo-cta')))mnav.classList.remove('open');});
+</script>
+</body>
+</html>
